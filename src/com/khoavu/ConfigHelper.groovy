@@ -4,7 +4,7 @@ import groovy.yaml.YamlSlurper
 
 
 class ConfigHelper {
-    def file = new File('./config.yml')
+    def file = new File('config.yml')
     def config = yaml.load(file.text)
 
     def showData() {
