@@ -19,7 +19,4 @@ pipeline {
     }
 }
 
-def getConfig() {
-    new ConfigHelper();
-}
 
