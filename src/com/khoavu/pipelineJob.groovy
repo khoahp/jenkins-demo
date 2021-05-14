@@ -1,9 +1,12 @@
+
 pipeline {
     agent any
     stages {
         stage('Build') {
             steps {
                 echo 'Build'
+
+
             }
         }
         stage('Test'){
@@ -13,3 +16,8 @@ pipeline {
         }
     }
 }
+
+def getConfig() {
+    new ConfigHelper();
+}
+

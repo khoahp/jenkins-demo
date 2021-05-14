@@ -1,0 +1,7 @@
+name: 'test-api'
+repo: 'http://github.com/.../test-api.git'
+tests:
+  - Unit
+  - QA
+  - Smoke
+vpc: 'staging'
