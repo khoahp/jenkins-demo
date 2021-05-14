@@ -5,11 +5,13 @@ pipeline {
             node {
                 def config = load 'ConfigHelper.groovy';
                 echo config.showData()
+
+                steps {
+                    echo 'Build'
+                }
             }
 
-            steps {
-                echo 'Build'
-            }
+
         }
         stage('Test'){
             steps {
