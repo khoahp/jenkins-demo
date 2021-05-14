@@ -1,3 +1,4 @@
+def config = load 'ConfigHelper.groovy';
 
 pipeline {
     agent any
@@ -6,6 +7,7 @@ pipeline {
             steps {
                 echo 'Build'
 
+                echo config.showData()
 
             }
         }
