@@ -41,7 +41,7 @@ def getInputParams(def param1, def param2) {
         echo "Walked through key $key and value $value"
     }
 
-    def workspace = manager.build.getEnvVars()["WORKSPACE"]
+    def workspace = pwd();
 
     echo "WORKSPACE" ${workspace}
 
