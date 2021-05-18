@@ -27,5 +27,9 @@ def getInputParams(def param1, def param2) {
     if(x)
         println "x value: ${x}"
 
-    println x.getClass().name
+    def props = readJSON file: 'config.json'
+
+    props.each { key, value ->
+        echo "Walked through key $key and value $value"
+    }
 }
