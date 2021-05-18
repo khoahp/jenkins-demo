@@ -31,7 +31,7 @@ def getInputParams(def param1, def param2) {
     if(x)
         println "x value: ${x}"
 
-    String config = libraryResource 'config.json'
+    String config = libraryResource './resources/config.json'
 
     def props = readJSON file: 'smocktest.json'
     //def props = readJSON text: config
