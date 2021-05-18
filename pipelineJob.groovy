@@ -4,11 +4,8 @@ pipeline {
         stage('Build') {
 
             steps {
-                script {
-                    //first.groovy path might change as per your need
-                    def var1 = load "EmailHelper.groovy"
-                    var1.build("php build")
-                }
+                getInputParams(10, 20)
+
 
                 echo 'Build'
             }
@@ -19,4 +16,8 @@ pipeline {
             }
         }
     }
+}
+
+def getInputParams(def param1, def param2) {
+    println("param1 is "+ param1 + ", param2 is " + param2)
 }
