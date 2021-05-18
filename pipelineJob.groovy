@@ -27,7 +27,10 @@ def getInputParams(def param1, def param2) {
     if(x)
         println "x value: ${x}"
 
-    def props = readJSON file: 'config.json'
+    String config = libraryResource 'config.json'
+
+    //def props = readJSON file: 'config.json'
+    def props = readJSON text: config
 
     props.each { key, value ->
         echo "Walked through key $key and value $value"
