@@ -1,5 +1,7 @@
 import groovy.json.JsonSlurper
 
+testFunc()
+
 pipelineJob('pipelineJob') {
     definition {
         cps {
@@ -8,7 +10,7 @@ pipelineJob('pipelineJob') {
         }
     }
 
-    testFunc()
+
 }
 
 pipelineJob('backend-pipe') {
