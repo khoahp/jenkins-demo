@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 pipelineJob('pipelineJob') {
     definition {
         cps {
@@ -5,6 +7,8 @@ pipelineJob('pipelineJob') {
             sandbox()
         }
     }
+
+    testFunc()
 }
 
 pipelineJob('backend-pipe') {
@@ -20,4 +24,8 @@ pipelineJob('backend-pipe') {
             }
         }
     }
+}
+
+def testFunc() {
+    println("testFunc")
 }
